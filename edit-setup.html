@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SkillSpring - Setup Profile</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+  <link rel="stylesheet" href="edit-setup.css">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+
+<body>
+
+<div class="setup-container">
+
+  <h1 class="logo">
+    SkillSpring
+  </h1>
+
+  <h2 class="page-title">
+    Finish Profile Setup
+  </h2>
+
+  <form>
+
+    <!-- BIO -->
+
+    <div class="field">
+
+      <label class="filled">Bio</label>
+
+      <textarea
+      placeholder="I love cats, and I'm introverted"></textarea>
+
+    </div>
+
+    <!-- GENDER -->
+
+    <div class="field">
+
+      <label class="filleds">Gender</label>
+
+      <div class="gender-options">
+
+        <label>
+          <input
+          type="checkbox"
+          name="gender" value="male" class="gender-box">
+          Male
+        </label>
+
+        <label>
+          <input
+          type="checkbox"
+          name="gender" value="female" class="gender-box">
+          Female
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- IMAGE -->
+
+    <div class="field">
+
+      <label class="filled">Profile Image</label>
+
+      <div class="upload-box">
+
+        <span>
+          Upload a profile photo
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+      </div>
+
+      <input
+      type="file"
+      id="imageInput"
+      hidden>
+
+    </div>
+
+    <button
+    type="submit"
+    class="finish-btn">
+
+      FINISH
+
+    </button>
+
+  </form>
+
+</div>
+<script src="./security.js"></script>
+<script src="./edit-setup.js"></script>
+
+</body>
+</html>

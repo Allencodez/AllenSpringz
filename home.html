@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SkillSpring - Home</title>
+
+    <!-- GOOGLE FONTS (UNCHANGED) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <main class="mentor-page">
+      <!-- SIDEBAR (UNCHANGED) -->
+      <aside class="desktop-sidebar">
+        <div class="sidebar-logo">SkillSpring</div>
+
+        <nav class="sidebar-nav">
+          <a href="home.html" class="sidebar-link active-sidebar">
+            <img class="icons" src="./assets/icon/purple-home.png" alt="" />
+            <span>Home</span>
+          </a>
+
+          <a href="discover.html" class="sidebar-link">
+            <img
+              class="icons compass-icons"
+              src="./assets/icon/compass.png"
+              alt=""
+            />
+            <span>Courses</span>
+          </a>
+
+          <a href="view-mentor.html" class="sidebar-link">
+            <img class="icons mentor-icon" src="./assets/icon/hat.png" alt="" />
+            <span>Mentors</span>
+          </a>
+
+          <a href="profile.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/user.png" alt="" />
+            <span>Profile</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <div class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div class="logo">SkillSpring</div>
+
+          <div class="search-box">
+            <input type="text" placeholder="Search" />
+            <button class="search-btn">
+              <img src="./assets/icon/search.png" class="search-icon" />
+            </button>
+          </div>
+        </header>
+
+        <div class="desktop-topbar">
+          <span>Back</span>
+        </div>
+
+        <section class="hero-section">
+          <!-- HERO TOP -->
+
+          <div class="hero-top-row">
+            <div class="hero-text">
+              <h3 id="welcomeMessage">Welcome back!</h3>
+
+              <p>Ready to continue your learning journey?</p>
+            </div>
+
+            <!-- NOTIFICATION -->
+
+            <button class="notification-btn">
+              <img src="./assets/icon/notif.png" alt="notif" />
+            </button>
+          </div>
+
+          <!-- STATS GRID -->
+
+          <div class="stats-grid">
+            <!-- CARD 1 -->
+
+            <div class="stats-card purple-border">
+              <div class="stats-icon purple-bg">
+                <img src="./assets/icon/purple-book.png" alt="" />
+              </div>
+
+              <div class="stats-text">
+                <h3>4</h3>
+
+                <p>Active Courses</p>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="stats-card pink-border">
+              <div class="stats-icon pink-bg">
+                <img src="./assets/icon/increase.png" alt="" />
+              </div>
+
+              <div class="stats-text">
+                <h3>78%</h3>
+
+                <p>Avg Progress</p>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="stats-card green-border">
+              <div class="stats-icon green-bg">
+                <img src="./assets/icon/achiv-ment.png" alt="" />
+              </div>
+
+              <div class="stats-text">
+                <h3>12</h3>
+
+                <p>Completed</p>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="stats-card red-border">
+              <div class="stats-icon red-bg">
+                <img src="./assets/icon/clock.png" alt="" />
+              </div>
+
+              <div class="stats-text">
+                <h3>24h</h3>
+
+                <p>Study Time</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTINUE LEARNING -->
+
+        <div class="section-top-row">
+          <h2>Continue Learning</h2>
+
+          <a href="discover.html" class="view-all-link">
+            <span>View all</span>
+
+            <img src="./assets/icon/right-arrow.png" alt="" />
+          </a>
+        </div>
+
+        <section class="courses-section">
+          <!-- COURSES GRID -->
+
+          <div class="courses-grid">
+            <!-- CARD 1 -->
+
+            <div class="course-card">
+              <!-- TOP -->
+
+              <div class="course-header-row">
+                <!-- LEFT -->
+
+                <div class="course-header-text">
+                  <span class="course-tag"> Web Development </span>
+
+                  <h3>Backend Web Development <span>| Grey Lucas</span></h3>
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="course-icon">
+                  <img src="./assets/icon/book.png" alt="book icon" />
+                </div>
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <p class="course-description">
+                Learn servers, APIs, databases, authentication, and how apps
+                work behind the scenes.
+              </p>
+
+              <!-- IN PROGRESS BADGE -->
+
+              <!-- STATUS -->
+
+              <div class="course-status">
+                <p>12 modules</p>
+
+                <span>50%</span>
+              </div>
+
+              <!-- PROGRESS -->
+
+              <div class="my-progress-bar">
+                <div class="my-progress-fill fifty"></div>
+              </div>
+
+              <!-- BUTTON -->
+
+              <button data-id="2" class="course-btn">Continue Learning</button>
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="course-card">
+              <!-- TOP -->
+
+              <div class="course-header-row">
+                <!-- LEFT -->
+
+                <div class="course-header-text">
+                  <span class="course-tag"> Product Design </span>
+
+                  <h3>
+                    Interaction Design
+                    <span>| John Carter</span>
+                  </h3>
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="course-icon">
+                  <img src="./assets/icon/book.png" alt="book icon" />
+                </div>
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <p class="course-description shift">
+                Design animations, transitions, and micro-interactions that
+                improve usability.
+              </p>
+
+              <!-- STATUS -->
+
+              <div class="course-status">
+                <p>12 modules</p>
+
+                <span>50%</span>
+              </div>
+
+              <!-- PROGRESS -->
+                            
+
+               <div class="my-progress-bar">
+                <div class="my-progress-fill fifty"></div>
+              </div>
+
+              <!-- BUTTON -->
+
+              <button data-id="4"class="course-btn">Continue Learning</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================
+     MY COURSES
+========================= -->
+
+        <section class="my-courses-section">
+          <h2 class="my-courses-title">My Courses</h2>
+
+          <div class="my-courses-grid">
+            <!-- CARD 1 -->
+
+            <div class="my-course-card">
+              <!-- TOP -->
+
+              <div class="my-course-top">
+                <!-- LEFT -->
+
+                <div class="my-course-left">
+                  <div class="my-course-icon">
+                    <img src="./assets/icon/book.png" alt="" />
+                  </div>
+
+                  <div class="my-course-text">
+                    <span class="my-course-tag"> Web Development </span>
+
+                    <h3>
+                      Front End Frameworks
+                      <span>| Tim Dave</span>
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="completed-badge">Completed</div>
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <p class="my-course-description">
+                Build modern interfaces using tools like React and
+                component-based architecture.
+              </p>
+
+              <!-- MODULES -->
+
+              <div class="my-course-modules">
+                <div class="modules-left">
+                  <span> ☐ 20 modules</span>
+                </div>
+              </div>
+
+              <!-- PROGRESS -->
+
+              <div class="my-progress-bar">
+                <div class="my-progress-fill full"></div>
+              </div>
+
+              <!-- COMPLETE TEXT -->
+
+              <p class="complete-text">100% complete</p>
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="my-course-card">
+              <!-- TOP -->
+
+              <div class="my-course-top">
+                <!-- LEFT -->
+
+                <div class="my-course-left">
+                  <div class="my-course-icon">
+                    <img src="./assets/icon/book.png" alt="" />
+                  </div>
+
+                  <div class="my-course-text">
+                    <span class="my-course-tag"> Product Design </span>
+
+                    <h3>
+                      Wireframing
+                      <span>| John Carter</span>
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="completed-badge">Completed</div>
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <p class="my-course-description">
+                Planning app or website structure before adding visual design.
+              </p>
+
+              <!-- MODULES -->
+
+              <div class="my-course-modules">
+                <div class="modules-left">
+                  <span> ☐ 12 modules</span>
+                </div>
+              </div>
+
+              <!-- PROGRESS -->
+
+              <div class="my-progress-bar">
+                <div class="my-progress-fill full"></div>
+              </div>
+
+              <!-- COMPLETE TEXT -->
+
+              <p class="complete-text">100% complete</p>
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="my-course-card">
+              <!-- TOP -->
+
+              <div class="my-course-top">
+                <!-- LEFT -->
+
+                <div class="my-course-left">
+                  <div class="my-course-icon">
+                    <img src="./assets/icon/book.png" alt="" />
+                  </div>
+
+                  <div class="my-course-text">
+                    <span class="my-course-tag"> Product Management </span>
+
+                    <h3>
+                      Agile Scrum
+                      <span>| James Friday</span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <p class="my-course-description">
+                Understanding teamwork and product development workflows.
+              </p>
+
+              <!-- MODULES -->
+
+              <div class="my-course-modules">
+                <div class="modules-left">
+                  <span> ☐ 12 modules</span>
+                </div>
+              </div>
+
+              <!-- PROGRESS -->
+
+              <div class="my-progress-bar">
+                <div class="my-progress-fill fifty"></div>
+              </div>
+
+              <!-- COMPLETE TEXT -->
+
+              <p class="complete-text">50% complete</p>
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="my-course-card">
+              <!-- TOP -->
+
+              <div class="my-course-top">
+                <!-- LEFT -->
+
+                <div class="my-course-left">
+                  <div class="my-course-icon">
+                    <img src="./assets/icon/book.png" alt="" />
+                  </div>
+
+                  <div class="my-course-text">
+                    <span class="my-course-tag"> Cyber Security </span>
+
+                    <h3>
+                      Ethical Hacking Fundamentals
+                      <span>| Seth Nolan</span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <p class="my-course-description">
+                Discover how security professionals test systems for
+                vulnerability.
+              </p>
+
+              <!-- MODULES -->
+
+              <div class="my-course-modules">
+                <div class="modules-left">
+                  <span> ☐ 12 modules</span>
+                </div>
+              </div>
+
+              <!-- PROGRESS -->
+
+              <div class="my-progress-bar">
+                <div class="my-progress-fill fifty"></div>
+              </div>
+
+              <!-- COMPLETE TEXT -->
+
+              <p class="complete-text">50% complete</p>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+       
+
+
+
+
+        <!-- ========================================
+   RECENTLY VIEWED
+======================================== -->
+
+<section class="recent-section">
+
+  <h2 class="recent-title">Recently Viewed</h2>
+
+  <div class="recent-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="recent-card">
+
+      <!-- LEFT -->
+
+      <div class="recent-left">
+
+        <div class="recent-icon">
+          <img src="./assets/icon/purple-book.png" alt="">
+        </div>
+
+        <div class="recent-text">
+
+          <span class="recent-tag">
+            Web Development
+          </span>
+
+          <h3>
+            Front End Frameworks
+            <span>| Tim Dave</span>
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- BOTTOM -->
+
+      <div class="recent-bottom">
+
+        <div class="recent-meta">
+
+          <div class="recent-time">
+            <img src="./assets/icon/purple-clock.png" alt="clock">
+            <span>15 min</span>
+          </div>
+
+          <p>Module 1</p>
+
+        </div>
+
+        <div class="recent-badge">
+          Completed
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CARD 2 -->
+
+    <div class="recent-card">
+
+      <!-- LEFT -->
+
+      <div class="recent-left">
+
+        <div class="recent-icon">
+          <img src="./assets/icon/purple-book.png" alt="">
+        </div>
+
+        <div class="recent-text">
+
+          <span class="recent-tag">
+            Data Science & Analysis
+          </span>
+
+          <h3>
+            Excel & Spreadsheets
+            <span>| Julian Lee</span>
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- BOTTOM -->
+
+      <div class="recent-bottom">
+
+        <div class="recent-meta">
+
+          <div class="recent-time">
+            <img src="./assets/icon/purple-clock.png" alt="clock">
+            <span>20 min</span>
+          </div>
+
+          <p>Module 1</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CARD 3 -->
+
+    <div class="recent-card">
+
+      <!-- LEFT -->
+
+      <div class="recent-left">
+
+        <div class="recent-icon">
+          <img src="./assets/icon/purple-book.png" alt="">
+        </div>
+
+        <div class="recent-text">
+
+          <span class="recent-tag">
+            Cybersecurity
+          </span>
+
+          <h3>
+            Cyber Threats
+            <span>| Margeret Thompson</span>
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- BOTTOM -->
+
+      <div class="recent-bottom">
+
+        <div class="recent-meta">
+
+             <div class="recent-time">
+
+  <img src="./assets/icon/purple-clock.png" alt="clock">
+
+  <span>25 min</span>
+
+</div>
+
+          <p>Module 2</p>
+
+        </div>
+
+        <div class="recent-badge">
+          Completed
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- MOBILE FOOTER (UNCHANGED) -->
+
+        <footer class="bottom-nav">
+          <a href="#home.html" class="nav-item active-nav">
+            <img src="./assets/icon/purple-home.png" />
+          </a>
+
+          <a href="discover.html" class="nav-item">
+            <img src="./assets/icon/compass.png" />
+          </a>
+
+          <a href="view-mentor.html" class="nav-item">
+            <img src="./assets/icon/hat.png" />
+          </a>
+
+          <a href="profile.html" class="nav-item">
+            <img src="./assets/icon/user.png" />
+          </a>
+        </footer>
+      </div>
+    </main>
+
+    <!-- SCRIPT -->
+     <script src="security.js"></script>
+     <script src="./course-data.js"></script>
+     <script src="home.js"></script>
+    <script src="./discover.js"></script>
+    
+  </body>
+</html>

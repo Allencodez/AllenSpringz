@@ -30,22 +30,26 @@
         <div class="sidebar-logo">SkillSpring</div>
 
         <nav class="sidebar-nav">
-          <a href="#" class="sidebar-link">
+          <a href="home.html" class="sidebar-link">
             <img class="icons" src="./assets/icon/home.png" alt="" />
             <span>Home</span>
           </a>
 
           <a href="discover.html" class="sidebar-link active-sidebar">
-            <img class="icons compass-icons" src="./assets/icon/purple-compass.png" alt="" />
+            <img
+              class="icons compass-icons"
+              src="./assets/icon/purple-compass.png"
+              alt=""
+            />
             <span>Courses</span>
           </a>
 
           <a href="view-mentor.html" class="sidebar-link">
             <img class="icons mentor-icon" src="./assets/icon/hat.png" alt="" />
-           <span>Mentors</span>
+            <span>Mentors</span>
           </a>
 
-          <a href="#" class="sidebar-link">
+          <a href="profile.html" class="sidebar-link">
             <img class="icons" src="./assets/icon/user.png" alt="" />
             <span>Profile</span>
           </a>
@@ -154,7 +158,7 @@
 
               <!-- BUTTON -->
 
-              <button class="course-btn">Continue Learning</button>
+              <button class="course-btn"  data-id="1">Continue Learning</button>
             </div>
 
             <!-- CARD 2 -->
@@ -204,7 +208,7 @@
 
               <!-- BUTTON -->
 
-              <button class="course-btn">Start Course</button>
+              <button class="course-btn"  data-id="2">Start Course</button>
             </div>
           </div>
 
@@ -263,7 +267,7 @@
 
               <!-- BUTTON -->
 
-              <button class="course-btn">Start Course</button>
+              <button class="course-btn" data-id="3">Start Course</button>
             </div>
 
             <!-- CARD 2 -->
@@ -319,38 +323,36 @@
 
               <!-- BUTTON -->
 
-              <button class="course-btn">Continue Learning</button>
+              <button class="course-btn" data-id="4">Continue Learning</button>
             </div>
           </div>
         </section>
 
         <!-- MOBILE FOOTER (UNCHANGED) -->
-           
-           <footer class="bottom-nav">
 
-  <a href="#" class="nav-item">
-    <img src="./assets/icon/home.png" />
-  </a>
+        <footer class="bottom-nav">
+          <a href="home.html" class="nav-item">
+            <img src="./assets/icon/home.png" />
+          </a>
 
-  <a href="discover.html" class="nav-item active-nav">
-    <img src="./assets/icon/purple-compass.png" />
-  </a>
+          <a href="discover.html" class="nav-item active-nav">
+            <img src="./assets/icon/purple-compass.png" />
+          </a>
 
-  <a href="view-mentor.html" class="nav-item">
-    <img src="./assets/icon/hat.png" />
-  </a>
+          <a href="view-mentor.html" class="nav-item">
+            <img src="./assets/icon/hat.png" />
+          </a>
 
-  <a href="#" class="nav-item">
-    <img src="./assets/icon/user.png" />
-  </a>
-
-</footer>
-
+          <a href="profile.html" class="nav-item">
+            <img src="./assets/icon/user.png" />
+          </a>
+        </footer>
       </div>
     </main>
 
     <!-- SCRIPT -->
 
     <script src="./discover.js"></script>
+    <script src="./course-data.js"></script>
   </body>
 </html>

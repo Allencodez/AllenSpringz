@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SkillSpring Auth</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="auth.css">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+<body>
+
+<div class="auth-container">
+
+  <div class="logo-section">
+    <h1 class="logo">SkillSpring</h1>
+    <p>Learn better, not harder.</p>
+  </div>
+
+  <!-- TABS -->
+
+  <div class="tab-switcher">
+    <button class="tab active" data-tab="signup">
+      Sign Up
+    </button>
+
+    <button class="tab" data-tab="signin">
+      Sign In
+    </button>
+  </div>
+
+  <!-- SIGN UP -->
+
+  <form id="signupForm" class="form active-form">
+
+    <label>Full Name</label>
+
+    <input
+      type="text"
+      id="signupName"
+      placeholder="Jin Fisher"
+    >
+
+    <label>Email</label>
+
+    <input
+      type="email"
+        id="signupEmail"
+      placeholder="jinfisher.x20@gmail.com"
+    >
+
+    <label>Password</label>
+
+    <div class="password-box">
+      <input
+       id="signupPassword"
+        type="password"
+        class="password-input"
+        placeholder="********"
+      >
+
+      <i class="fa-regular fa-eye-slash toggle-password"></i>
+    </div>
+
+    <div class="role-section">
+
+      <p>I am a:</p>
+
+      <div class="roles">
+
+        <label>
+          <input type="radio" name="role">
+          Student
+        </label>
+
+        <label>
+          <input type="radio" name="role">
+          Mentor
+        </label>
+
+      </div>
+
+    </div>
+
+    <button class="cta-btn">
+      CREATE ACCOUNT
+    </button>
+
+  </form>
+
+  <!-- SIGN IN -->
+
+  <form id="signinForm" class="form">
+
+    <label>Email</label>
+
+    <input
+     id="signinEmail"
+      type="email"
+      placeholder="jinfisher@example.com"
+    >
+
+    <label>Password</label>
+
+    <div class="password-box">
+      <input
+       id="signinPassword"
+        type="password"
+        class="password-input"
+        placeholder="********"
+      >
+
+      <i class="fa-regular fa-eye-slash toggle-password"></i>
+    </div>
+
+    <button class="cta-btn">
+      SIGN IN
+    </button>
+
+  </form>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

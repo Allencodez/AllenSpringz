@@ -1,0 +1,336 @@
+:root {
+  --primary-purple: #8b4dff;
+  --primary-blue: #3d73f1;
+  --text-dark: #111827;
+  --text-light: #374151;
+  --bg: #f5f5f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   SPLASH SCREEN
+========================= */
+
+.splash-screen {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: "Acme", sans-serif;
+  font-size: 32px;
+  color: var(--primary-purple);
+
+  background: linear-gradient(
+    90deg,
+    rgba(124, 58, 237, 0.9) 0%,
+    rgba(37, 99, 235, 0.9) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* =========================
+   ONBOARDING
+========================= */
+
+.onboarding {
+  min-height: 100vh;
+  padding: 28px 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+}
+
+.skip-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  height: 34px;
+  font-family: "Outfit";
+   transition: all 0.2s ease;
+    padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.skip-btn:hover{
+  background: rgba(124, 58, 237, 0.08);
+  color: #111;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero-image {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.hero-image img {
+  width: 290px;
+  height: 290px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 2px solid var(--primary-purple);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.content {
+  padding: 0 6px;
+}
+
+.content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+/* =========================
+   BOTTOM AREA
+========================= */
+
+.bottom-section {
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* indicators */
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicator span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d4d4d8;
+}
+
+.indicator .active {
+  width: 24px;
+  border-radius: 20px;
+  background: var(--primary-blue);
+}
+
+/* button */
+
+.next-btn {
+  width: 150px;
+  height: 40px;
+
+  font-family: "Manrope";
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 40px;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary-purple),
+    var(--primary-blue)
+  );
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+}
+
+.next-btn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media screen and (min-width: 768px) {
+  .onboarding {
+    max-width: 1000px;
+    margin: 20px;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      ". skip"
+      "image content"
+      "image bottom";
+
+    column-gap: 50px;
+    row-gap: 20px;
+
+    align-content: center;
+    min-height: 50vh;
+  }
+
+  .skip-container {
+    grid-area: skip;
+    margin-bottom: 280px;
+  }
+
+  .skip-btn {
+    font-size: 24px;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    grid-area: image;
+    margin: 0;
+    align-self: center;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .content {
+    grid-area: content;
+    padding: 0;
+    align-self: end;
+  }
+
+  .content h2 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 26px;
+  }
+
+  .bottom-section {
+    grid-area: bottom;
+    margin-top: 0;
+
+    justify-content: flex-start;
+    gap: 40px;
+  }
+}
+
+/* ==========================================
+   DESKTOP RESPONSIVE
+========================================== */
+
+@media screen and (min-width: 1024px) {
+  .onboarding {
+    /* max-width: 1200px; */
+    min-height: 100vh;
+
+    grid-template-columns: 380px 1fr;
+    column-gap: 90px;
+
+    /* Center the onboarding content vertically */
+    align-content: center;
+
+    margin: 0 auto;
+  }
+
+  .skip-container {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+  }
+
+  .skip-btn {
+    font-size: 24px;
+  }
+
+  .hero-image img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .content h2 {
+    font-size: 2.25rem;
+  }
+
+  .content p {
+    max-width: 400px;
+    font-size: 1.8rem;
+  }
+
+  .bottom-section {
+    gap: 70px;
+  }
+
+  .next-btn {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

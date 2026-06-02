@@ -1,4 +1,4 @@
-
+// protectPage(); // 👈 MUST BE FIRST LINE
 // mentor profile
 
 
@@ -127,3 +127,51 @@ if (desktopBack) {
   });
 }
 
+
+
+
+
+
+
+
+
+// const viewMoreBtn = document.querySelector(".view-more");
+
+// if (viewMoreBtn) {
+//   viewMoreBtn.addEventListener("click", () => {
+
+//     const id = mentor.id; // 👈 current mentor from URL logic
+
+//     window.location.href =
+//       `course-detail.html?id=${id}`;
+//   });
+// }
+
+// const viewMoreBtn = document.querySelector(".view-more");
+
+// if (viewMoreBtn) {
+//   viewMoreBtn.addEventListener("click", () => {
+
+//     const params = new URLSearchParams(window.location.search);
+//     const mentorId = Number(params.get("id"));
+
+//     const mentor = mentors.find(m => m.id === mentorId);
+
+//     if (!mentor) return;
+
+//     window.location.href =
+//       `course-detail.html?id=${mentor.id}`;
+//   });
+// }
+
+
+const viewMoreBtn = document.querySelector(".view-more");
+
+if (viewMoreBtn) {
+  viewMoreBtn.addEventListener("click", () => {
+
+    // reuse the already parsed ID from top of file
+    window.location.href =
+      `course-detail.html?id=${mentorId}`;
+  });
+}

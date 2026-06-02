@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SkillSpring - Profile</title>
+
+    <!-- GOOGLE FONTS (UNCHANGED) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+
+  <body>
+    <main class="mentor-page">
+      <!-- SIDEBAR (UNCHANGED) -->
+      <aside class="desktop-sidebar">
+        <div class="sidebar-logo">SkillSpring</div>
+
+        <nav class="sidebar-nav">
+          <a href="home.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/home.png" alt="" />
+            <span>Home</span>
+          </a>
+
+          <a href="discover.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/compass.png" alt="" />
+            <span>Courses</span>
+          </a>
+
+          <a href="view-mentor.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/hat.png" alt="" />
+            <span>Mentors</span>
+          </a>
+
+          <a href="profile.html" class="sidebar-link active-sidebar">
+            <img class="icons" src="./assets/icon/purple-profile.png" alt="" />
+            <span>Profile</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <div class="main-content">
+        <!-- PROFILE HEADER -->
+
+        <div class="profile-top">
+          <h1>Profile</h1>
+
+          <div class="profile-actions">
+            <div class="action-btn">
+              <img class="dark-mode" src="./assets/icon/dark-mode.png" alt="" />
+            </div>
+
+            <div class="action-btn">
+              <img class="logout" src="./assets/icon/log-out.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PROFILE HERO -->
+
+        <section class="profile-hero">
+          <div class="profile-image">
+            <img id="avatar" src="./assets/icon/profile-img.jpg" alt="" />
+          </div>
+
+          <h2 id="username">Jin Fisher</h2>
+
+          <p class="profile-email">jinfisher.x20@gmail.com</p>
+
+          <p id="bio" class="profile-quote">“I love cats and I’m introverted”</p>
+
+          <button class="edit-profile-btn">
+            Edit Profile
+
+            <img src="./assets/icon/pen.png" alt="" />
+          </button>
+        </section>
+
+        <!-- STREAK CARD -->
+
+        <section class="streak-card">
+          <div class="streak-icon">
+            <img src="./assets/icon/carbon_badge.png" alt="" />
+          </div>
+
+          <h3>Learning Streak</h3>
+
+          <h2>7 Days</h2>
+
+          <p>Keep it up!</p>
+        </section>
+
+        <!-- STATS GRID -->
+
+        <section class="stats-grid">
+          <!-- CARD -->
+          <div class="stat-card purple-card">
+                <div class="stat-top">
+                  <div class="stat-icon purple-icon">
+                    <img src="./assets/icon/purple-book.png" alt="" />
+                  </div>
+
+                  <h2>4</h2>
+                </div>
+
+                <p>Active</p>
+          </div>
+
+          <!-- CARD -->
+
+          <div class="stat-card purple-card">
+            <div class="stat-top">
+              <div class="stat-icon purple-icon">
+                <img src="./assets/icon/increase.png" alt="" />
+              </div>
+
+              <h2>2</h2>
+            </div>
+
+            <p>In Progress</p>
+          </div>
+
+          <!-- CARD -->
+
+          <div class="stat-card green-card">
+            <div class="stat-top">
+              <div class="stat-icon green-icon">
+                <img src="./assets/icon/achiv-ment.png" alt="" />
+              </div>
+
+              <h2>2</h2>
+            </div>
+
+            <p>Completed</p>
+          </div>
+
+          <!-- CARD -->
+
+          <div class="stat-card red-card">
+            <div class="stat-top">
+              <div class="stat-icon red-icon">
+                <img src="./assets/icon/clock.png" alt="" />
+              </div>
+
+              <h2>72h</h2>
+            </div>
+
+            <p>Study Time</p>
+          </div>
+        </section>
+
+        <!-- MOBILE FOOTER (UNCHANGED) -->
+
+        <footer class="bottom-nav">
+          <a href="home.html" class="nav-item">
+            <img src="./assets/icon/home.png" />
+          </a>
+
+          <a href="discover.html" class="nav-item">
+            <img src="./assets/icon/compass.png" />
+          </a>
+
+          <a href="view-mentor.html" class="nav-item">
+            <img src="./assets/icon/hat.png" />
+          </a>
+
+          <a href="profile.html" class="nav-item active-nav">
+            <img src="./assets/icon/purple-profile.png" />
+          </a>
+        </footer>
+      </div>
+    </main>
+
+    <!-- SCRIPT -->
+      
+        <script src="./security.js"></script>
+    <script src="./discover.js"></script>
+
+    <script>
+      const logoutBtn = document.querySelector(".logout");
+      
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("skillspringCurrentUser");
+  window.location.href = "auth.html";
+});
+
+const editProfileBtn = document.querySelector(".edit-profile-btn");
+
+editProfileBtn.addEventListener("click", () => {
+  window.location.href = "edit-setup.html";
+});
+
+
+
+
+const darkModeBtn = document.querySelector(".dark-mode");
+
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("dark-theme");
+}
+
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+
+  if(document.body.classList.contains("dark-theme")){
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+    </script>
+
+<script src="./profile.js"></script>
+  </body>
+</html>

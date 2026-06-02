@@ -135,4 +135,53 @@ searchBtn.addEventListener("click", () => {
 
 
 
-// active sidebar
+// document.querySelectorAll(".course-btn").forEach(btn => {
+//   btn.addEventListener("click", () => {
+//     window.location.href = "course-detail.html";
+//   });
+// });
+
+
+// dynamic course detail rendering
+
+
+
+
+
+
+
+
+
+
+// document.querySelectorAll(".course-btn").forEach(btn => {
+//   btn.addEventListener("click", (e) => {
+//     const id = e.currentTarget.dataset.id;
+
+//     window.location.href = `course-detail.html?id=${id}`;
+//   });
+// });
+
+
+/*
+----------------------------------------
+COURSE CARD NAVIGATION
+----------------------------------------
+When user clicks a course button,
+send the course id to course-detail page.
+----------------------------------------
+*/
+
+const courseButtons = document.querySelectorAll(".course-btn");
+
+courseButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const courseId = button.dataset.id;
+
+    window.location.href =
+      `course-detail.html?id=${courseId}`;
+
+  });
+
+});

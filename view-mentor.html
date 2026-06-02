@@ -1,143 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>SkillSpring - Find Mentors</title>
+    <title>SkillSpring - Find Mentors</title>
 
-  <!-- GOOGLE FONTS (UNCHANGED) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS (UNCHANGED) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="view-mentor.css" />
-</head>
+    <link rel="stylesheet" href="view-mentor.css" />
+  </head>
 
-<body>
+  <body>
+    <main class="mentor-page">
+      <!-- SIDEBAR (UNCHANGED) -->
+      <aside class="desktop-sidebar">
+        <div class="sidebar-logo">SkillSpring</div>
 
-<main class="mentor-page">
+        <nav class="sidebar-nav">
+          <a href="home.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/home.png" alt="" />
+            <span>Home</span>
+          </a>
 
-  <!-- SIDEBAR (UNCHANGED) -->
-  <aside class="desktop-sidebar">
+          <a href="discover.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/compass.png" alt="" />
+            <span>Courses</span>
+          </a>
 
-    <div class="sidebar-logo">SkillSpring</div>
+          <a href="view-mentor.html" class="sidebar-link active-sidebar">
+            <img class="icons" src="./assets/icon/purple-hat.png" alt="" />
+            <span>Mentors</span>
+          </a>
 
-    <nav class="sidebar-nav">
+          <a href="profile.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/user.png" alt="" />
+            <span>Profile</span>
+          </a>
+        </nav>
+      </aside>
 
-      <a href="#" class="sidebar-link">
-        <img class="icons" src="./assets/icon/home.png" alt="">
-        <span>Home</span>
-      </a>
+      <!-- MAIN -->
+      <div class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div class="logo">SkillSpring</div>
 
-      <a href="discover.html" class="sidebar-link">
-        <img class="icons" src="./assets/icon/compass.png" alt="">
-        <span>Courses</span>
-      </a>
+          <div class="search-box">
+            <input type="text" placeholder="Search" />
+            <button class="search-btn">
+              <img src="./assets/icon/search.png" class="search-icon" />
+            </button>
+          </div>
+        </header>
 
-      <a href="view-mentor.html" class="sidebar-link active-sidebar">
-        <img class="icons" src="./assets/icon/purple-hat.png" alt="">
-        <span>Mentors</span>
-      </a>
+        <div class="desktop-topbar">
+          <span>Back</span>
+        </div>
 
-      <a href="#" class="sidebar-link">
-        <img class="icons" src="./assets/icon/user.png" alt="">
-        <span>Profile</span>
-      </a>
+        <!-- HERO (UNCHANGED) -->
+        <section class="hero-section">
+          <h1>Find a Mentor</h1>
+          <p>Learn faster with guidance from experienced professionals.</p>
+        </section>
 
-    </nav>
+        <!-- FILTER TABS (UNCHANGED + SCROLL FRIENDLY) -->
+        <section class="filter-tabs">
+          <button class="tab active">All</button>
+          <button class="tab">Web Development</button>
+          <button class="tab">Product Design</button>
+          <button class="tab">Cyber Security</button>
+          <button class="tab">Data Science & Analytics</button>
+          <button class="tab">Product Management</button>
+        </section>
 
-  </aside>
+        <div class="results-text">
+          Showing <span id="count">0</span> mentors
+        </div>
 
-  <!-- MAIN -->
-  <div class="main-content">
+        <!-- 🔥 RESTORED STRUCTURE (IMPORTANT FOR MOBILE SCROLL + CSS) -->
 
-    <!-- HEADER -->
-    <header class="top-header">
+        <section class="mentor-category">
+          <div class="category-top">
+            <h2>Web Development</h2>
+            <span>2 mentors</span>
+          </div>
+          <div class="mentor-grid" id="webGrid"></div>
+        </section>
 
-      <div class="logo">SkillSpring</div>
+        <section class="mentor-category">
+          <div class="category-top">
+            <h2>Product Design</h2>
+            <span>2 mentors</span>
+          </div>
+          <div class="mentor-grid" id="designGrid"></div>
+        </section>
 
-      <div class="search-box">
-        <input type="text" placeholder="Search" />
-        <button class="search-btn">
-          <img src="./assets/icon/search.png" class="search-icon" />
-        </button>
+        <!-- MOBILE FOOTER (UNCHANGED) -->
+
+        <footer class="bottom-nav">
+          <a href="home.html" class="nav-item">
+            <img src="./assets/icon/home.png" />
+          </a>
+
+          <a href="discover.html" class="nav-item">
+            <img src="./assets/icon/compass.png" />
+          </a>
+
+          <a href="view-mentor.html" class="nav-item active-nav">
+            <img src="./assets/icon/purple-hat.png" />
+          </a>
+
+          <a href="profile.html" class="nav-item">
+            <img src="./assets/icon/user.png" />
+          </a>
+        </footer>
       </div>
+    </main>
 
-    </header>
-
-    <div class="desktop-topbar">
-      <span>Back</span>
-    </div>
-
-    <!-- HERO (UNCHANGED) -->
-    <section class="hero-section">
-      <h1>Find a Mentor</h1>
-      <p>Learn faster with guidance from experienced professionals.</p>
-    </section>
-
-    <!-- FILTER TABS (UNCHANGED + SCROLL FRIENDLY) -->
-    <section class="filter-tabs">
-
-      <button class="tab active">All</button>
-      <button class="tab">Web Development</button>
-      <button class="tab">Product Design</button>
-      <button class="tab">Cyber Security</button>
-      <button class="tab">Data Science & Analytics</button>
-      <button class="tab">Product Management</button>
-
-    </section>
-
-    <div class="results-text">
-      Showing <span id="count">0</span> mentors
-    </div>
-
-    <!-- 🔥 RESTORED STRUCTURE (IMPORTANT FOR MOBILE SCROLL + CSS) -->
-
-    <section class="mentor-category">
-      <div class="category-top">
-        <h2>Web Development</h2>
-        <span>2 mentors</span>
-      </div>
-      <div class="mentor-grid" id="webGrid"></div>
-    </section>
-
-    <section class="mentor-category">
-      <div class="category-top">
-        <h2>Product Design</h2>
-        <span>2 mentors</span>
-      </div>
-      <div class="mentor-grid" id="designGrid"></div>
-    </section>
-
-    <!-- MOBILE FOOTER (UNCHANGED) -->
-    
-      <footer class="bottom-nav">
-
-  <a href="#" class="nav-item">
-    <img src="./assets/icon/home.png" />
-  </a>
-
-  <a href="discover.html" class="nav-item">
-    <img src="./assets/icon/compass.png" />
-  </a>
-
-  <a href="view-mentor.html" class="nav-item active-nav">
-    <img src="./assets/icon/purple-hat.png" />
-  </a>
-
-  <a href="#" class="nav-item">
-    <img src="./assets/icon/user.png" />
-  </a>
-
-</footer>
-
-  </div>
-</main>
-
- <script src="./mentor.js"></script>
-</body>
+    <script src="./mentor.js"></script>
+  </body>
 </html>

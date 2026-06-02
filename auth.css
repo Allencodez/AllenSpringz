@@ -1,0 +1,305 @@
+:root{
+  --bg:white;
+  --purple:#7C3AED;
+  --blue:#2563EB;
+  --border:#F8FAFC;
+  --text:#111827;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--bg);
+  font-family:"Inter",sans-serif;
+}
+
+.auth-container{
+  padding:28px 20px;
+}
+
+.logo-section{
+  text-align:center;
+  margin-top:40px;
+}
+
+.logo {
+ font-family: "Acme", sans-serif;
+  width: 187px;
+  height: 41px;
+  font-size:32px;
+  font-weight:500;
+    margin-bottom: 36px;
+    margin: auto;
+
+  background: linear-gradient(
+    90deg,
+    rgba(124, 58, 237, 0.9) 0%,
+    rgba(37, 99, 235, 0.9) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+.logo-section p{
+  margin-top:10px;
+  font-size:.8rem;
+}
+
+.tab-switcher{
+  margin-top:36px;
+
+   background: #ffffff;
+  box-shadow: 0px 0px 3px 0px lightgrey;
+  border-radius:13px;
+  
+  padding:1.8px;
+  display:flex;
+
+  overflow:hidden;
+}
+
+.tab{
+  flex:1;
+
+  border:none;
+  border-radius: 12px;
+  background:none;
+
+  padding:12px;
+
+  font-size:1rem;
+
+  cursor:pointer;
+}
+
+.tab.active{
+  background:linear-gradient(
+  90deg,
+  var(--blue)
+  );
+
+  color:white;
+}
+
+.form{
+  display:none;
+  margin-top:26px;
+  
+}
+
+.active-form{
+  display:block;
+}
+
+label{
+  display:block;
+
+  margin-bottom:8px;
+  margin-top:18px;
+
+  font-size:.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+box-shadow: 0px 0px 3px 0px lightgrey;
+  width:100%;
+  height:48px;
+  
+  font-size: 14px;
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  padding:0 14px;
+
+  background:white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #bdbdbd;
+}
+
+input[type="radio"] {
+  accent-color: #111;
+}
+
+.password-box{
+  position:relative;
+}
+
+.toggle-password{
+  position:absolute;
+
+  right:15px;
+  top:16px;
+
+  cursor:pointer;
+}
+
+.role-section{
+  margin-top:22px;
+}
+
+.roles{
+  display:flex;
+  gap:28px;
+  /* margin-bottom: 30px; */
+}
+
+.cta-btn{
+  margin-top:50px;
+
+  width:100%;
+  height:52px;
+
+  border:none;
+
+  border-radius:10px;
+
+  color:white;
+
+  font-weight:600;
+
+  background:linear-gradient(
+  90deg,
+  var(--purple),
+  var(--blue)
+  );
+
+  cursor:pointer;
+}
+
+
+
+
+
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (min-width:768px){
+
+  body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:#fff;
+  }
+
+  .auth-container{
+    width:100%;
+    max-width:700px;
+    margin: auto;
+    padding:50px 40px 70px;
+  }
+
+  .logo-section{
+    margin-top:20px;
+  }
+
+  .logo{
+    font-size:2.3rem;
+    height: 61px;
+  }
+
+  .logo-section p{
+    font-size:20px;
+  }
+
+  .tab-switcher{
+    margin-top:42px;
+  }
+
+  .tab{
+    height:54px;
+    font-size:24px;
+  }
+
+  .form{
+    margin-top:34px;
+  }
+
+  .form label{
+    font-size:24px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    height:56px;
+    font-size:24px;
+box-shadow: 0px 0px 3px 0px #7c3aed;
+  }
+
+  .cta-btn{
+    height:56px;
+    margin-top:56px;
+    font-size: 24px;
+  }
+
+  .role-section p{
+    font-size: 20px;
+  }
+
+}
+
+
+/* ==========================
+   DESKTOP
+========================== */
+
+@media (min-width:1024px){
+
+  body{
+    align-items:center;
+  }
+
+  .auth-container{
+    /* max-width:640px; */
+
+    padding:60px 50px 80px;
+  }
+
+  .logo{
+    font-size:2.5rem;
+  }
+
+  .tab{
+    height:56px;
+  }
+
+  label{
+    font-size:1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    height:58px;
+  }
+
+  .roles{
+    gap:40px;
+  }
+
+  .cta-btn{
+    height:58px;
+    font-size:15px;
+  }
+}

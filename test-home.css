@@ -1,0 +1,438 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#ffffff;
+  color:#111111;
+}
+
+.mentor-page{
+  width:100%;
+  padding:32px 20px 20px;
+}
+
+/* DESKTOP SIDEBAR */
+
+.desktop-sidebar{
+  display:none;
+}
+
+
+/* FOOTER */
+
+.bottom-nav{
+  height: 64px;
+  width:100%;
+  background:#061235;
+  border-radius:32px;
+  padding:10px 10px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: 0px;
+    margin-top: 25px;
+  gap: 80px;
+}
+
+
+.nav-item img{
+  width:25px;
+  height:25px;
+  object-fit:contain;
+}
+
+.active-nav{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.active-nav img{
+  width:25px;
+  height:25px;
+}
+
+.icons{
+    width:16px;
+    height:16px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  body{
+    background:#f5f5f5;
+  }
+
+  .mentor-page{
+    display:flex;
+    min-height:100vh;
+    padding:0;
+  }
+
+  /* SHOW SIDEBAR */
+
+  .desktop-sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:130px;
+    height:100vh;
+
+    background:#18233f;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:40px 20px;
+
+    z-index:1000;
+  }
+
+  /* SIDEBAR CONTENT */
+
+.sidebar-logo{
+  font-family:"Acme", sans-serif;
+  font-size:22px;
+
+  margin-bottom:80px;
+  line-height:1.3;
+
+  color:#ffffff;
+
+  text-shadow:
+    -1px -1px 0 rgba(124, 58, 237, 0.95),
+     1px -1px 0 rgba(37, 99, 235, 0.95),
+    -1px  1px 0 rgba(124, 58, 237, 0.95),
+     1px  1px 0 rgba(37, 99, 235, 0.95),
+
+    -2px -2px 0 rgba(124, 58, 237, 0.85),
+     2px -2px 0 rgba(37, 99, 235, 0.85),
+    -2px  2px 0 rgba(124, 58, 237, 0.85),
+     2px  2px 0 rgba(37, 99, 235, 0.85),
+
+    0 0 8px rgba(124, 58, 237, 0.5),
+    0 0 12px rgba(37, 99, 235, 0.4);
+}
+
+.sidebar-nav{
+  display:flex;
+  flex-direction:column;
+  gap:42px;
+}
+
+.sidebar-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  text-decoration:none;
+
+  color:#ffffff;
+
+  font-size:16px;
+  font-weight:500;
+}
+
+.sidebar-link img{
+  width:18px;
+  height:18px;
+}
+
+.active-sidebar{
+  color:#7C3AED;
+}
+
+.sidebar-link:hover{
+  color:#7C3AED;
+}
+
+  /* MAIN CONTENT */
+
+  .main-content{
+    flex:1;
+    width:100%;
+
+    padding-left:170px;
+
+    background:#f5f5f5;
+  }
+
+
+  /* HIDE BOTTOM NAVBAR */
+
+  .bottom-nav{
+    display:none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+
+@media(min-width:1024px){
+
+  body{
+    background:#f5f5f5;
+  }
+
+  .mentor-page{
+    max-width:100%;
+    padding:0;
+    display:flex;
+    min-height:100vh;
+  }
+
+  /* SIDEBAR */
+
+  .desktop-sidebar{
+    width:130px;
+    background:#18233f;
+    display:flex;
+    flex-direction:column;
+    padding:40px 20px;
+  }
+
+.sidebar-logo{
+  font-family:"Acme", sans-serif;
+  font-size:22px;
+
+  margin-bottom:80px;
+  line-height:1.3;
+
+  color:#ffffff;
+
+  text-shadow:
+    -1px -1px 0 rgba(124, 58, 237, 0.95),
+     1px -1px 0 rgba(37, 99, 235, 0.95),
+    -1px  1px 0 rgba(124, 58, 237, 0.95),
+     1px  1px 0 rgba(37, 99, 235, 0.95),
+
+    -2px -2px 0 rgba(124, 58, 237, 0.85),
+     2px -2px 0 rgba(37, 99, 235, 0.85),
+    -2px  2px 0 rgba(124, 58, 237, 0.85),
+     2px  2px 0 rgba(37, 99, 235, 0.85),
+
+    0 0 8px rgba(124, 58, 237, 0.5),
+    0 0 12px rgba(37, 99, 235, 0.4);
+}
+
+  .sidebar-nav{
+    display:flex;
+    flex-direction:column;
+    gap:42px;
+  }
+
+  .sidebar-link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:500;
+  }
+
+  .sidebar-link img{
+    width:18px;
+    height:18px;
+  }
+
+
+  .active-sidebar{
+    color:#7C3AED;
+  }
+
+  .sidebar-link:hover{
+    color:#7C3AED;
+  }
+
+  /* MAIN */
+
+  .main-content{
+    flex:1;
+    background:#f5f5f5;
+  }
+
+  /* HIDE MOBILE FOOTER */
+
+  .bottom-nav{
+    display:none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SkillSpring - Profile</title>
+
+    <!-- GOOGLE FONTS (UNCHANGED) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+
+  <body>
+    <main class="mentor-page">
+      <!-- SIDEBAR (UNCHANGED) -->
+      <aside class="desktop-sidebar">
+        <div class="sidebar-logo">SkillSpring</div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="sidebar-link">
+            <img class="icons" src="./assets/icon/home.png" alt="" />
+            <span>Home</span>
+          </a>
+
+          <a href="discover.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/compass.png" alt="" />
+            <span>Courses</span>
+          </a>
+
+          <a href="view-mentor.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/hat.png" alt="" />
+           <span>Mentors</span>
+          </a>
+
+          <a href="#" class="sidebar-link  active-sidebar">
+            <img class="icons" src="./assets/icon/purple-profile.png" alt="" />
+            <span>Profile</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <div class="main-content">
+       
+
+          
+
+       
+             
+
+        <!-- MOBILE FOOTER (UNCHANGED) -->
+           
+           <footer class="bottom-nav">
+
+  <a href="#" class="nav-item">
+    <img src="./assets/icon/home.png" />
+  </a>
+
+  <a href="discover.html" class="nav-item active-nav">
+    <img src="./assets/icon/purple-compass.png" />
+  </a>
+
+  <a href="view-mentor.html" class="nav-item">
+    <img src="./assets/icon/hat.png" />
+  </a>
+
+  <a href="#" class="nav-item">
+    <img src="./assets/icon/user.png" />
+  </a>
+
+</footer>
+
+      </div>
+    </main>
+
+    <!-- SCRIPT -->
+
+    <script src="./discover.js"></script>
+  </body>
+</html>

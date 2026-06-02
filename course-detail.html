@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Skillspring - Course Detail</title>
+
+    <link rel="stylesheet" href="course-detail.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Figtree:wght@300..900&family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="mentor-page">
+      <!-- DESKTOP SIDEBAR -->
+      <aside class="desktop-sidebar">
+        <div class="sidebar-logo">SkillSpring</div>
+
+        <nav class="sidebar-nav">
+          <a href="home.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/home.png" alt="" />
+            <span>Home</span>
+          </a>
+
+          <a href="discover.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/compass.png" alt="" />
+            <span>Courses</span>
+          </a>
+
+          <a href="index.html" class="sidebar-link active-sidebar">
+            <img class="icons" src="./assets/icon/purple-hat.png" alt="" />
+            <span>Mentors</span>
+          </a>
+
+          <a href="profile.html" class="sidebar-link">
+            <img class="icons" src="./assets/icon/user.png" alt="" />
+            <span>Profile</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+        <!-- MOBILE HEADER -->
+        <header class="top-header">
+          <div class="logo">
+            <h1>SkillSpring</h1>
+          </div>
+
+          <div class="back-btn">Back</div>
+        </header>
+
+        <!-- DESKTOP TOPBAR -->
+        <div class="desktop-topbar">
+          <span class="back-btn">Back</span>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content-wrapper">
+          <!-- LEFT CONTENT -->
+          <div class="left-content">
+
+           <div class="video">
+
+                <p id="video-title"></p>
+                 <img class="play-btn" src="assets/icon/icons8-play-button-64.png" alt="">
+              </div>
+
+
+            <!-- ABOUT -->
+            <section class="about-section">
+              
+               <h2 id="course-title"></h2>
+              
+              <p id="course-description">
+               
+              </p>
+
+            </section>
+
+            <!-- COURSES -->
+            <!-- <section class="courses-section">
+              <h2>Modules</h2>
+
+              <div class="course-card">1. Introduction to Design Systems</div>
+
+              <div class="course-card">2. UI consistency & Visual Foundations</div>
+
+              <div class="course-card">3. Typography & Color Systems</div>
+
+              <div class="course-card">4. Spacing, Layouts & Grids</div>
+
+              <div class="course-card">5. Designing re-usable components</div>
+
+              <div class="course-card">6.Variants & Components Properties</div>
+
+              <div class="course-card">7. Auto-Layout Mastery</div>
+
+              <div class="course-card">8. Design Tokens & Variables </div>
+
+              <div class="course-card">9. Building a Figma Library</div>
+
+              <div class="course-card">10. Scaling systems for real products</div>
+            </section> -->
+
+            <section class="courses-section">
+
+  <h2>Modules</h2>
+
+  <div id="modules"></div>
+
+</section>
+
+            
+          </div>
+
+            <div class="book-btn-wrapper">
+                     <button class="book-btn">Start Course</button>
+            </div>
+          
+
+           
+                 <!-- SKILLSPRING INSTRUCTOR SECTION -->
+
+<div class="mentor-card">
+
+  <div class="mentor-left">
+
+    <!-- PROFILE IMAGE -->
+    <img
+  id="mentor-image"
+  src=""
+  alt="mentor"
+  class="mentor-img">
+
+
+    <div class="mentor-info">
+
+      <!-- NAME TAG -->
+     <div
+  id="mentor-name"
+  class="mentor-name">
+</div>
+
+      <!-- ROLE -->
+      <p
+  id="mentor-role"
+  class="mentor-role">
+</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- RATING -->
+  <div class="mentor-rating">
+
+    <img src="assets/icon/Vector.svg" alt="star" class="star-icon">
+
+    <span id="mentor-rating"></span>
+
+  </div>
+
+</div>
+
+
+    <div class="about-me">
+     <p
+  id="about-mentor"
+  class="about-you">
+</p>
+    </div>
+          
+
+        <!-- BUTTON -->
+        <div class="book-btn-wrapper">
+         
+          <!-- MOBILE FOOTER -->
+          <footer class="bottom-nav">
+            <a href="home.html" class="nav-item">
+              <img src="./assets/icon/home.png" />
+            </a>
+
+            <a href="discover.html" class="nav-item">
+              <img src="./assets/icon/compass.png" />
+            </a>
+
+            <a href="view-mentor.html" class="nav-item active-nav">
+              <img src="./assets/icon/purple-hat.png" />
+            </a>
+
+            <a href="#" class="nav-item">
+              <img src="./assets/icon/user.png" />
+            </a>
+          </footer>
+        </div>
+      </div>
+    </div>
+ 
+   <script src="./course-data.js"></script>
+<script src="./course-detail.js"></script>
+  </body>
+</html>

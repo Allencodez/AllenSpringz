@@ -1,0 +1,334 @@
+:root {
+  --bg: white;
+  --purple: #7c3aed;
+  --blue: #2563eb;
+  --border: #f8fafc;
+  --text: #111827;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Inter", sans-serif;
+}
+
+.setup-container {
+  padding: 24px 20px 40px;
+}
+
+.logo {
+ font-family: "Acme", sans-serif;
+  width: 187px;
+  height: 41px;
+  font-size:32px;
+  font-weight:500;
+    margin-bottom: 36px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(124, 58, 237, 0.9) 0%,
+    rgba(37, 99, 235, 0.9) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-title {
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  margin-bottom: 40px;
+  font-family: "Outfit";
+}
+
+.field {
+  margin-bottom: 28px;
+}
+
+.field label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+
+  height: 45px;
+
+  line-height: 22.5px;
+
+  resize: none;
+
+  padding: 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  font-family: inherit;
+
+  box-shadow: 0px 0px 2px 0px #7c3aed;
+}
+
+.gender-options {
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+}
+
+.gender-options input {
+  accent-color: #111;
+}
+
+.upload-box {
+  height: 45px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 0px #7c3aed;
+}
+
+.upload-box span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.finish-btn {
+ margin-top:150px;
+
+  width:100%;
+  height:54px;
+
+  border:none;
+
+  border-radius:10px;
+
+  color:white;
+
+  font-weight:600;
+
+  background:linear-gradient(
+  90deg,
+  var(--purple),
+  var(--blue)
+  );
+
+  font-size: 16px;
+  cursor:pointer;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+
+  border-color: #cfcfcf;
+  box-shadow: 0px 0px 3px 0px #7c3aed;
+}
+
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (min-width:768px){
+
+  body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+  }
+
+  .setup-container{
+    width:100%;
+    max-width:560px;
+
+    padding:50px 40px 70px;
+  }
+
+  .logo{
+    text-align:center;
+    width: 290px;
+    height: 61px;
+    font-weight: 400;
+    font-size:48px;
+
+    margin-bottom:40px;
+
+    display: flex;
+  }
+
+  .page-title{
+    font-size:40px;
+    font-weight: 400;
+    margin-bottom:42px;
+  }
+
+  .field label{
+    font-size: 28px;
+  }
+
+
+  textarea{
+    height:70px;
+    padding:20px;
+    font-size: 24px;
+    box-shadow: 0px 0px 4px 0px #7c3aed;
+  }
+
+  
+.gender-options {
+  display: flex;
+  gap: 30px;
+}
+
+.gender-options label{
+  font-size: 1.3rem;
+  color: grey;
+  margin-top: 5px;
+}
+
+.gender-options input {
+  accent-color: #111;
+}
+
+
+ .gender-options input[type="checkbox"]{
+    transform: scale(3.3);
+    margin-right:18px;
+    margin-left: 20PX;
+  }
+
+
+  .upload-box{
+    height:70px;
+    Cursor: pointer;
+  box-shadow: 0px 0px 4px 0px #7c3aed;
+  }
+
+
+  .upload-box span{
+      font-size: 24px ;
+  }
+
+  .finish-btn{
+    height:70px;
+    margin-top:20px;
+    font-size: 28px ;
+  }
+}
+
+
+/* ==========================
+   DESKTOP
+========================== */
+
+@media (min-width:1024px){
+
+  body{
+    align-items:center;
+    height: 100%;
+  }
+
+  .setup-container{
+    max-width:640px;
+
+    padding:60px 70px 80px;
+  }
+
+  .logo{
+    text-align:center;
+    width: 290px;
+    height: 61px;
+    font-weight: 400;
+    font-size:48px;
+
+    margin-bottom:40px;
+
+    display: flex;
+  }
+
+  .page-title{
+    font-size:40px;
+    font-weight: 400;
+    margin-bottom:42px;
+  }
+
+  .field label{
+    font-size: 28px;
+  }
+
+
+  textarea{
+    height:70px;
+    padding:20px;
+    font-size: 24px;
+    box-shadow: 0px 0px 4px 0px #7c3aed;
+  }
+
+  
+.gender-options {
+  display: flex;
+  gap: 30px;
+}
+
+.gender-options label{
+  font-size: 1.3rem;
+  color: grey;
+  margin-top: 5px;
+}
+
+.gender-options input {
+  accent-color: #111;
+}
+
+
+ .gender-options input[type="checkbox"]{
+    transform: scale(3.3);
+    margin-right:18px;
+    margin-left: 20PX;
+  }
+
+
+  .upload-box{
+    height:70px;
+    Cursor: pointer;
+  box-shadow: 0px 0px 4px 0px #7c3aed;
+  }
+
+
+  .upload-box span{
+      font-size: 24px ;
+  }
+
+  .finish-btn{
+    height:70px;
+    margin-top:20px;
+    font-size: 28px ;
+  }
+}
