@@ -35,7 +35,7 @@
             <span>Home</span>
           </a>
 
-          <a href="discover.html" class="sidebar-link">
+          <a href="discover.html" data-nav class="sidebar-link">
             <img
               class="icons compass-icons"
               src="./assets/icon/compass.png"
@@ -44,12 +44,12 @@
             <span>Courses</span>
           </a>
 
-          <a href="view-mentor.html" class="sidebar-link">
+          <a href="view-mentor.html" data-nav class="sidebar-link">
             <img class="icons mentor-icon" src="./assets/icon/hat.png" alt="" />
             <span>Mentors</span>
           </a>
 
-          <a href="profile.html" class="sidebar-link">
+          <a href="profile.html" data-nav class="sidebar-link">
             <img class="icons" src="./assets/icon/user.png" alt="" />
             <span>Profile</span>
           </a>
@@ -58,6 +58,8 @@
 
       <!-- MAIN -->
       <div class="main-content">
+    
+
         <!-- HEADER -->
         <header class="top-header">
           <div class="logo">SkillSpring</div>
@@ -257,16 +259,19 @@
               </div>
 
               <!-- PROGRESS -->
-                            
 
-               <div class="my-progress-bar">
+              <div class="my-progress-bar">
                 <div class="my-progress-fill fifty"></div>
               </div>
 
               <!-- BUTTON -->
 
-              <button data-id="4"class="course-btn">Continue Learning</button>
+              <button data-id="4" class="course-btn">Continue Learning</button>
             </div>
+          </div>
+
+          <div class="search-empty-state" id="searchEmptyState">
+            No search results found.
           </div>
         </section>
 
@@ -486,192 +491,122 @@
           </div>
         </section>
 
-
-
-
-
-       
-
-
-
-
         <!-- ========================================
    RECENTLY VIEWED
 ======================================== -->
 
-<section class="recent-section">
+        <section class="recent-section">
+          <h2 class="recent-title">Recently Viewed</h2>
 
-  <h2 class="recent-title">Recently Viewed</h2>
+          <div class="recent-grid">
+            <!-- CARD 1 -->
 
-  <div class="recent-grid">
+            <div class="recent-card">
+              <!-- LEFT -->
 
-    <!-- CARD 1 -->
+              <div class="recent-left">
+                <div class="recent-icon">
+                  <img src="./assets/icon/purple-book.png" alt="" />
+                </div>
 
-    <div class="recent-card">
+                <div class="recent-text">
+                  <span class="recent-tag"> Web Development </span>
 
-      <!-- LEFT -->
+                  <h3>
+                    Front End Frameworks
+                    <span>| Tim Dave</span>
+                  </h3>
+                </div>
+              </div>
 
-      <div class="recent-left">
+              <!-- BOTTOM -->
 
-        <div class="recent-icon">
-          <img src="./assets/icon/purple-book.png" alt="">
-        </div>
+              <div class="recent-bottom">
+                <div class="recent-meta">
+                  <div class="recent-time">
+                    <img src="./assets/icon/purple-clock.png" alt="clock" />
+                    <span>15 min</span>
+                  </div>
 
-        <div class="recent-text">
+                  <p>Module 1</p>
+                </div>
 
-          <span class="recent-tag">
-            Web Development
-          </span>
+                <div class="recent-badge">Completed</div>
+              </div>
+            </div>
 
-          <h3>
-            Front End Frameworks
-            <span>| Tim Dave</span>
-          </h3>
+            <!-- CARD 2 -->
 
-        </div>
+            <div class="recent-card">
+              <!-- LEFT -->
 
-      </div>
+              <div class="recent-left">
+                <div class="recent-icon">
+                  <img src="./assets/icon/purple-book.png" alt="" />
+                </div>
 
-      <!-- BOTTOM -->
+                <div class="recent-text">
+                  <span class="recent-tag"> Data Science & Analysis </span>
 
-      <div class="recent-bottom">
+                  <h3>
+                    Excel & Spreadsheets
+                    <span>| Julian Lee</span>
+                  </h3>
+                </div>
+              </div>
 
-        <div class="recent-meta">
+              <!-- BOTTOM -->
 
-          <div class="recent-time">
-            <img src="./assets/icon/purple-clock.png" alt="clock">
-            <span>15 min</span>
+              <div class="recent-bottom">
+                <div class="recent-meta">
+                  <div class="recent-time">
+                    <img src="./assets/icon/purple-clock.png" alt="clock" />
+                    <span>20 min</span>
+                  </div>
+
+                  <p>Module 1</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="recent-card">
+              <!-- LEFT -->
+
+              <div class="recent-left">
+                <div class="recent-icon">
+                  <img src="./assets/icon/purple-book.png" alt="" />
+                </div>
+
+                <div class="recent-text">
+                  <span class="recent-tag"> Cybersecurity </span>
+
+                  <h3>
+                    Cyber Threats
+                    <span>| Margeret Thompson</span>
+                  </h3>
+                </div>
+              </div>
+
+              <!-- BOTTOM -->
+
+              <div class="recent-bottom">
+                <div class="recent-meta">
+                  <div class="recent-time">
+                    <img src="./assets/icon/purple-clock.png" alt="clock" />
+
+                    <span>25 min</span>
+                  </div>
+
+                  <p>Module 2</p>
+                </div>
+
+                <div class="recent-badge">Completed</div>
+              </div>
+            </div>
           </div>
-
-          <p>Module 1</p>
-
-        </div>
-
-        <div class="recent-badge">
-          Completed
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- CARD 2 -->
-
-    <div class="recent-card">
-
-      <!-- LEFT -->
-
-      <div class="recent-left">
-
-        <div class="recent-icon">
-          <img src="./assets/icon/purple-book.png" alt="">
-        </div>
-
-        <div class="recent-text">
-
-          <span class="recent-tag">
-            Data Science & Analysis
-          </span>
-
-          <h3>
-            Excel & Spreadsheets
-            <span>| Julian Lee</span>
-          </h3>
-
-        </div>
-
-      </div>
-
-      <!-- BOTTOM -->
-
-      <div class="recent-bottom">
-
-        <div class="recent-meta">
-
-          <div class="recent-time">
-            <img src="./assets/icon/purple-clock.png" alt="clock">
-            <span>20 min</span>
-          </div>
-
-          <p>Module 1</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- CARD 3 -->
-
-    <div class="recent-card">
-
-      <!-- LEFT -->
-
-      <div class="recent-left">
-
-        <div class="recent-icon">
-          <img src="./assets/icon/purple-book.png" alt="">
-        </div>
-
-        <div class="recent-text">
-
-          <span class="recent-tag">
-            Cybersecurity
-          </span>
-
-          <h3>
-            Cyber Threats
-            <span>| Margeret Thompson</span>
-          </h3>
-
-        </div>
-
-      </div>
-
-      <!-- BOTTOM -->
-
-      <div class="recent-bottom">
-
-        <div class="recent-meta">
-
-             <div class="recent-time">
-
-  <img src="./assets/icon/purple-clock.png" alt="clock">
-
-  <span>25 min</span>
-
-</div>
-
-          <p>Module 2</p>
-
-        </div>
-
-        <div class="recent-badge">
-          Completed
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
+        </section>
 
         <!-- MOBILE FOOTER (UNCHANGED) -->
 
@@ -680,26 +615,31 @@
             <img src="./assets/icon/purple-home.png" />
           </a>
 
-          <a href="discover.html" class="nav-item">
+          <a href="discover.html" data-nav class="nav-item">
             <img src="./assets/icon/compass.png" />
           </a>
 
-          <a href="view-mentor.html" class="nav-item">
+          <a href="view-mentor.html" data-nav class="nav-item">
             <img src="./assets/icon/hat.png" />
           </a>
 
-          <a href="profile.html" class="nav-item">
+          <a href="profile.html" data-nav class="nav-item">
             <img src="./assets/icon/user.png" />
           </a>
         </footer>
       </div>
     </main>
 
+     <div class="search-loading hidden" id="searchLoading">
+          <div class="loading-spinner"></div>
+          <p>Searching...</p>
+        </div>
+
     <!-- SCRIPT -->
-     <script src="security.js"></script>
-     <script src="./course-data.js"></script>
-     <script src="home.js"></script>
+    <script src="nav.js"></script>
+    <script src="security.js"></script>
+    <script src="./course-data.js"></script>
+    <script src="home.js"></script>
     <script src="./discover.js"></script>
-    
   </body>
 </html>

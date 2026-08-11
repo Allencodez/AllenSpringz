@@ -1,47 +1,27 @@
-// protectPage(); // 👈 MUST BE FIRST LINE
-
-
 const user = getCurrentUser();
 
-const uploadBox =
-document.querySelector(".upload-box");
-
-const imageInput =
-document.getElementById("imageInput");
-
-const uploadText =
-document.querySelector(".upload-box span");
+const uploadBox = document.querySelector(".upload-box");
+const imageInput = document.getElementById("imageInput");
+const uploadText = document.querySelector(".upload-box span");
 
 uploadBox.addEventListener("click", () => {
-
   imageInput.click();
-
 });
 
-
-
 imageInput.addEventListener("change", () => {
-
   const file = imageInput.files[0];
-
   if (!file) return;
 
   const reader = new FileReader();
 
   reader.onload = function (e) {
-
     const base64Image = e.target.result;
-
     uploadText.textContent = file.name;
-
     window.tempAvatar = base64Image;
   };
 
   reader.readAsDataURL(file);
 });
-
-
-
 
 const genderBoxes = document.querySelectorAll(".gender-box");
 
@@ -56,9 +36,6 @@ genderBoxes.forEach(box => {
     }
   });
 });
-
-
-
 
 function updateProfile(name, bio, avatar, gender) {
   let users = getUsers();
@@ -79,17 +56,14 @@ function updateProfile(name, bio, avatar, gender) {
 
   saveUsers(updatedUsers);
 
-  // update session too
   const updatedCurrentUser = updatedUsers.find(
     u => u.id === currentUser.id
   );
 
   setCurrentUser(updatedCurrentUser);
 
-  alert("Profile updated successfully");
+  showToast("Profile updated successfully", "success");
 }
-
-
 
 const logoutBtn = document.getElementById("logoutBtn");
 
@@ -100,19 +74,19 @@ if (logoutBtn) {
   });
 }
 
-
-
-
 window.addEventListener("DOMContentLoaded", () => {
-
   const form = document.querySelector("form");
-
   if (!form) return;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const bio = document.querySelector("textarea").value;
+    const bioInput = document.querySelector("textarea").value;
+
+    const bio =
+      bioInput.trim() !== ""
+        ? bioInput
+        : getCurrentUser().bio || "";
 
     const gender =
       [...document.querySelectorAll(".gender-box")]
@@ -125,11 +99,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     updateProfile(user.name, bio, avatar, gender);
 
-    window.location.href = "profile.html";
+    // Wait 1.2s so the user sees the success toast before redirecting
+    setTimeout(() => {
+      window.location.href = "profile.html";
+    }, 1200);
   });
-
-  console.log("JS loaded");
-
-  console.log("Submit clicked");
-
 });

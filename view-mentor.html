@@ -30,22 +30,22 @@
         <div class="sidebar-logo">SkillSpring</div>
 
         <nav class="sidebar-nav">
-          <a href="home.html" class="sidebar-link">
+          <a href="home.html" class="sidebar-link" data-nav>
             <img class="icons" src="./assets/icon/home.png" alt="" />
             <span>Home</span>
           </a>
 
-          <a href="discover.html" class="sidebar-link">
+          <a href="discover.html" class="sidebar-link" data-nav>
             <img class="icons" src="./assets/icon/compass.png" alt="" />
             <span>Courses</span>
           </a>
 
-          <a href="view-mentor.html" class="sidebar-link active-sidebar">
+          <a href="view-mentor.html" class="sidebar-link active-sidebar" data-nav>
             <img class="icons" src="./assets/icon/purple-hat.png" alt="" />
             <span>Mentors</span>
           </a>
 
-          <a href="profile.html" class="sidebar-link">
+          <a href="profile.html" class="sidebar-link" data-nav>
             <img class="icons" src="./assets/icon/user.png" alt="" />
             <span>Profile</span>
           </a>
@@ -90,6 +90,10 @@
           Showing <span id="count">0</span> mentors
         </div>
 
+        <div id="searchLoading" class="hidden">
+  Searching...
+</div>
+
         <!-- 🔥 RESTORED STRUCTURE (IMPORTANT FOR MOBILE SCROLL + CSS) -->
 
         <section class="mentor-category">
@@ -111,25 +115,26 @@
         <!-- MOBILE FOOTER (UNCHANGED) -->
 
         <footer class="bottom-nav">
-          <a href="home.html" class="nav-item">
+          <a href="home.html" data-nav class="nav-item">
             <img src="./assets/icon/home.png" />
           </a>
 
-          <a href="discover.html" class="nav-item">
+          <a href="discover.html" data-nav class="nav-item">
             <img src="./assets/icon/compass.png" />
           </a>
 
-          <a href="view-mentor.html" class="nav-item active-nav">
+          <a href="view-mentor.html" data-nav class="nav-item active-nav">
             <img src="./assets/icon/purple-hat.png" />
           </a>
 
-          <a href="profile.html" class="nav-item">
+          <a href="profile.html" data-nav class="nav-item">
             <img src="./assets/icon/user.png" />
           </a>
         </footer>
       </div>
     </main>
-
+    
+    <script src="./nav.js"></script>
     <script src="./mentor.js"></script>
   </body>
 </html>

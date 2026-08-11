@@ -334,3 +334,158 @@ body {
     font-size: 20px;
   }
 }
+
+
+/* 
+LOADER ANIMATION */  
+/* ==========================
+   Splash Screen Fade Out
+========================== */
+
+.splash-screen.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ==========================
+   Loading Screen
+========================== */
+
+.loading-container {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 9999;
+}
+
+.loading-container.active {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-spinner {
+  width: 65px;
+  height: 65px;
+
+  border: 4px solid transparent;
+  border-top: 4px solid #7c3aed;
+  border-right: 4px solid #2563eb;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 20px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ONBOARDING PAGE ANIMATION
+========================= */
+
+.onboarding {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: onboardingEnter 0.8s ease-out forwards;
+}
+
+@keyframes onboardingEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   PAGE EXIT ANIMATION
+========================= */
+
+.page-fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+
+
+
+/* =========================
+   GLOBAL PAGE TRANSITIONS
+========================= */
+
+body {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+/* page exit animation */
+body.page-exit {
+  opacity: 0;
+  transform: translateY(-10px);
+}

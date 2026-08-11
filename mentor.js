@@ -8,6 +8,10 @@ tabs.forEach(tab => {
   });
 });
 
+
+
+
+
 // FULL DATA
 const mentors = [
   {
@@ -121,6 +125,8 @@ function createCard(m) {
 
 function render() {
 
+  console.log("RENDER FIRED");
+
   webGrid.innerHTML = "";
   designGrid.innerHTML = "";
 
@@ -170,40 +176,126 @@ function render() {
       window.location.href = `mentor-profile.html?id=${id}`;
     });
   });
+
+  
 }
 
                // SEARCH FUNCTIONALITY
 
+               
+               const searchLoading = document.getElementById("searchLoading");
+
                const searchInput = document.querySelector(".search-box input");
 
-searchInput.addEventListener("input", (e) => {
 
-  const value = e.target.value.toLowerCase().trim();
+               
+// searchInput.addEventListener("input", (e) => {
+//   const value = e.target.value;
 
-  filteredMentors = mentors.filter(m => {
+//   // if input is empty → reset everything immediately
+//   if (value.trim() === "") {
+//     filteredMentors = [...mentors];
+//     render();
+//     return;
+//   }
 
-    return (
-      m.name.toLowerCase().includes(value) ||
-      m.role.toLowerCase().includes(value) ||
-      m.skills.toLowerCase().includes(value)
-    );
+//   // otherwise use Discover-style loading flow
+//   startSearch(value);
+// });
 
-  });
 
-  render();
+function handleSearchTrigger() {
+  const value = searchInput.value.trim();
 
-});
+  if (value === "") {
+    filteredMentors = [...mentors];
+    render();
+    return;
+  }
+
+  startSearch(value);
+}
 
 
         //  SEARCH BUTTON FUNCTIONALITY
 
-        const searchBtn = document.querySelector(".search-btn");
+       const searchBtn = document.querySelector(".search-btn");
 
-searchBtn.addEventListener("click", () => {
-  searchInput.dispatchEvent(new Event("input"));
+
+
+// searchBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   startSearch(searchInput.value);
+// });
+
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  handleSearchTrigger();
 });
 
 
+
+
+// searchInput.addEventListener("keydown", (e) => {
+//   if (e.key === "Enter") {
+//     e.preventDefault();
+//     startSearch(searchInput.value);
+//   }
+// });
+
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    handleSearchTrigger();
+  }
+});
+
+
+
+searchInput.addEventListener("input", () => {
+  if (searchInput.value.trim() === "") {
+    filteredMentors = [...mentors];
+    render();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+function startSearch(value) {
+  searchLoading.classList.remove("hidden");
+
+  setTimeout(() => {
+    runSearch(value);
+    searchLoading.classList.add("hidden");
+  }, 500);
+}
+
+
+
+function runSearch(value) {
+  const searchValue = value.toLowerCase().trim();
+
+  filteredMentors = mentors.filter(m => {
+    return (
+      m.name.toLowerCase().includes(searchValue) ||
+      m.role.toLowerCase().includes(searchValue) ||
+      m.skills.toLowerCase().includes(searchValue)
+    );
+  });
+
+  render();
+}
+
+
 render();
-
-

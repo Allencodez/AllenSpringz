@@ -30,12 +30,12 @@
         <div class="sidebar-logo">SkillSpring</div>
 
         <nav class="sidebar-nav">
-          <a href="home.html" class="sidebar-link">
+          <a href="home.html" class="sidebar-link" data-nav>
             <img class="icons" src="./assets/icon/home.png" alt="" />
             <span>Home</span>
           </a>
 
-          <a href="discover.html" class="sidebar-link active-sidebar">
+          <a href="discover.html" class="sidebar-link active-sidebar" data-nav>
             <img
               class="icons compass-icons"
               src="./assets/icon/purple-compass.png"
@@ -44,12 +44,12 @@
             <span>Courses</span>
           </a>
 
-          <a href="view-mentor.html" class="sidebar-link">
+          <a href="view-mentor.html" class="sidebar-link" data-nav>
             <img class="icons mentor-icon" src="./assets/icon/hat.png" alt="" />
             <span>Mentors</span>
           </a>
 
-          <a href="profile.html" class="sidebar-link">
+          <a href="profile.html" class="sidebar-link" data-nav>
             <img class="icons" src="./assets/icon/user.png" alt="" />
             <span>Profile</span>
           </a>
@@ -79,6 +79,10 @@
           <h1>Discover Courses</h1>
           <p>Explore in-demand skills and start learning today.</p>
         </section>
+
+        <div id="searchLoading" class="hidden">
+  Searching...
+</div>
 
         <!-- FILTER TABS (UNCHANGED + SCROLL FRIENDLY) -->
         <section class="filter-tabs">
@@ -110,7 +114,9 @@
           <div class="courses-grid">
             <!-- CARD 1 -->
 
-            <div class="course-card">
+            <div class="course-card"   data-category="web"
+     data-title="Databases"
+     data-mentor="Kim Chase">
               <!-- TOP -->
 
               <div class="course-header-row">
@@ -163,7 +169,9 @@
 
             <!-- CARD 2 -->
 
-            <div class="course-card">
+            <div class="course-card"   data-category="web"
+     data-title="Version Control (Git & GitHub)"
+     data-mentor="Grey Lucas">
               <!-- TOP -->
 
               <div class="course-header-row">
@@ -225,7 +233,9 @@
           <div class="courses-grid shift">
             <!-- CARD 1 -->
 
-            <div class="course-card">
+            <div class="course-card"   data-category="design"
+     data-title="Design Systems"
+     data-mentor="Samantha Jones">
               <!-- TOP -->
 
               <div class="course-header-row">
@@ -272,7 +282,9 @@
 
             <!-- CARD 2 -->
 
-            <div class="course-card">
+            <div class="course-card"  data-category="design"
+     data-title="Prototyping"
+     data-mentor="John Carter">
               <!-- TOP -->
 
               <div class="course-header-row">
@@ -331,19 +343,19 @@
         <!-- MOBILE FOOTER (UNCHANGED) -->
 
         <footer class="bottom-nav">
-          <a href="home.html" class="nav-item">
+          <a href="home.html" data-nav class="nav-item">
             <img src="./assets/icon/home.png" />
           </a>
 
-          <a href="discover.html" class="nav-item active-nav">
+          <a href="discover.html" data-nav class="nav-item active-nav">
             <img src="./assets/icon/purple-compass.png" />
           </a>
 
-          <a href="view-mentor.html" class="nav-item">
+          <a href="view-mentor.html" data-nav class="nav-item">
             <img src="./assets/icon/hat.png" />
           </a>
 
-          <a href="profile.html" class="nav-item">
+          <a href="profile.html" data-nav class="nav-item">
             <img src="./assets/icon/user.png" />
           </a>
         </footer>
@@ -351,7 +363,7 @@
     </main>
 
     <!-- SCRIPT -->
-
+    <script src="nav.js"></script>
     <script src="./discover.js"></script>
     <script src="./course-data.js"></script>
   </body>

@@ -10,10 +10,26 @@ body{
   -ms-overflow-style:none;
   scrollbar-width:none;
   width: 100%;
+
+
+   opacity: 0;
+  /* transform: translateY(10px); */
+  transition: all 0.5s ease;
+  padding-bottom: 80px;
 }
 
 body::-webkit-scrollbar{
   display:none;
+}
+
+body.page-enter {
+  opacity: 1;
+  /* transform: translateY(0); */
+}
+
+body.page-exit {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 .mentor-page{
@@ -465,7 +481,7 @@ body::-webkit-scrollbar{
 
 .bottom-nav{
   height: 64px;
-  width:100%;
+  width:auto;
   background:#061235;
   border-radius:32px;
   padding:18px 24px;
@@ -474,8 +490,12 @@ body::-webkit-scrollbar{
   align-items:center;
   gap: 60px;
 
-  margin-top:20px;
-  margin-bottom:30px;
+   z-index: 999;
+
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 }
 
 .nav-item{

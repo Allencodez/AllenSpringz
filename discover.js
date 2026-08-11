@@ -41,125 +41,144 @@ const webGrid =
 const designGrid =
   document.querySelectorAll(".courses-grid")[1];
 
-searchInput.addEventListener("input", (e) => {
 
-  const value =
-    e.target.value.toLowerCase().trim();
+
+
+const searchLoading =
+  document.getElementById("searchLoading");
+
+function startSearch() {
+
+  searchLoading.classList.remove("hidden");
+
+  setTimeout(() => {
+
+    runSearch();
+
+    searchLoading.classList.add("hidden");
+
+  }, 500);
+
+}
+
+
+
+
+
+function runSearch() {
+  const value = searchInput.value.toLowerCase().trim();
 
   let visibleCount = 0;
-
   let webCount = 0;
   let designCount = 0;
 
   courseCards.forEach(card => {
+    const category = card.dataset.category || "";
+    const title = card.dataset.title || "";
+    const mentor = card.dataset.mentor || "";
 
-    const text =
-      card.innerText.toLowerCase();
+    const searchableText =
+      `${category} ${title} ${mentor}`.toLowerCase();
 
-    const match =
-      text.includes(value);
+    const match = searchableText.includes(value);
 
-    card.style.display =
-      match ? "block" : "none";
+    card.hidden = !match;
 
     if (match) {
-
       visibleCount++;
 
-      // CATEGORY CHECK
-
-      if (
-        text.includes("web development")
-      ) {
-        webCount++;
-      }
-
-      if (
-        text.includes("product design")
-      ) {
-        designCount++;
-      }
-
+      if (category === "web") webCount++;
+      if (category === "design") designCount++;
     }
-
   });
 
-  // UPDATE COURSE COUNT
+  coursesCount.textContent = `Showing ${visibleCount} courses`;
 
-  coursesCount.textContent =
-    `Showing ${visibleCount} courses`;
+  webHeader.style.display = webCount > 0 ? "flex" : "none";
+  webGrid.style.display = webCount > 0 ? "grid" : "none";
 
-  // SHOW/HIDE CATEGORIES
+  designHeader.style.display = designCount > 0 ? "flex" : "none";
+  designGrid.style.display = designCount > 0 ? "grid" : "none";
+}
 
-  if (value !== "") {
 
-    webHeader.style.display =
-      webCount > 0 ? "flex" : "none";
 
-    webGrid.style.display =
-      webCount > 0 ? "grid" : "none";
 
-    designHeader.style.display =
-      designCount > 0 ? "flex" : "none";
 
-    designGrid.style.display =
-      designCount > 0 ? "grid" : "none";
 
-  } else {
 
-    // RESET DEFAULT VIEW
 
-    webHeader.style.display = "flex";
-    webGrid.style.display = "grid";
 
-    designHeader.style.display = "flex";
-    designGrid.style.display = "grid";
 
-  }
-
-});
 
 // ================================
 // SEARCH BUTTON FUNCTIONALITY
 // ================================
 
-searchBtn.addEventListener("click", () => {
+// searchInput.addEventListener("keydown", (e) => {
+//   if (e.key === "Enter") {
+//     runSearch();
+//   }
+// });
 
-  searchInput.dispatchEvent(
-    new Event("input")
-  );
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // prevents any default button behavior
+  startSearch();
+});
+
+
+
+
+// prevent page reload when search input is cleared
+
+searchInput.addEventListener("input", () => {
+
+  const value = searchInput.value.trim();
+
+  if (value === "") {
+
+    // reset loader if visible
+    searchLoading.classList.add("hidden");
+
+    // reset all cards
+    courseCards.forEach(card => {
+      card.hidden = false;
+    });
+
+    // reset counters
+    coursesCount.textContent = `Showing ${courseCards.length} courses`;
+
+    // restore categories
+    webHeader.style.display = "flex";
+    designHeader.style.display = "flex";
+
+    webGrid.style.display = "grid";
+    designGrid.style.display = "grid";
+  }
 
 });
 
 
 
 
+//enter key load search
 
-// document.querySelectorAll(".course-btn").forEach(btn => {
-//   btn.addEventListener("click", () => {
-//     window.location.href = "course-detail.html";
-//   });
-// });
+searchInput.addEventListener("keydown", (e) => {
+
+  if (e.key === "Enter") {
+
+    e.preventDefault();
+
+    startSearch();
+
+  }
+
+});
 
 
 // dynamic course detail rendering
 
 
-
-
-
-
-
-
-
-
-// document.querySelectorAll(".course-btn").forEach(btn => {
-//   btn.addEventListener("click", (e) => {
-//     const id = e.currentTarget.dataset.id;
-
-//     window.location.href = `course-detail.html?id=${id}`;
-//   });
-// });
 
 
 /*
@@ -185,3 +204,5 @@ courseButtons.forEach(button => {
   });
 
 });
+
+

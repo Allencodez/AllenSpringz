@@ -9,19 +9,18 @@ body {
   background: #ffffff;
   color: #111111;
 
-  min-height: 100vh;
+ min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   opacity: 0;
-  /* transform: translateY(10px); */
+  transform: translateY(10px);
   transition: all 0.5s ease;
-  padding-bottom: 60px;
 }
 
 body.page-enter {
   opacity: 1;
-  /* transform: translateY(0); */
+  transform: translateY(0);
 }
 
 body.page-exit {
@@ -496,24 +495,16 @@ body.page-exit {
 
 .bottom-nav {
   height: 64px;
-  width: auto;
+  width: 100%;
   background: #061235;
   border-radius: 32px;
   padding: 10px 10px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
   margin-top: 25px;
   gap: 60px;
-    z-index: 999;
-
-    
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
 }
 
 /* .bottom-nav{
@@ -529,7 +520,7 @@ body.page-exit {
   gap: 60px;
 
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 20px;
   right: 20px;
 
@@ -759,26 +750,13 @@ body.page-exit {
 
   /* SIDEBAR */
 
-    .desktop-sidebar {
-    position: fixed; /* Locks sidebar in place */
-    top: 0;
-    left: 0;
-    height: 100vh;
+  .desktop-sidebar {
     width: 130px;
     background: #18233f;
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    z-index: 1000;
   }
-
-  /* .desktop-sidebar {
-    width: 130px;
-    background: #18233f;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 20px;
-  } */
 
   .sidebar-logo {
     font-family: "Acme", sans-serif;
@@ -831,7 +809,6 @@ body.page-exit {
   .main-content {
     flex: 1;
     background: #f5f5f5;
-    margin-left: 130px;
   }
 
   .top-header {
@@ -909,3 +886,56 @@ body.page-exit {
   font-weight: 500;
   color: #7c3aed;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

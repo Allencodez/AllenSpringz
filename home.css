@@ -8,7 +8,27 @@ body{
   font-family:'Inter', sans-serif;
   background:#ffffff;
   color:#111111;
+
+  opacity: 0;
+  /* transform: translateY(10px); */
+  transition: all 0.5s ease;
+  padding-bottom: 60px;
 }
+
+body.page-enter {
+  opacity: 1;
+  /* transform: translateY(0); */
+}
+
+
+
+/* page exit animation */
+body.page-exit {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+
 
 .mentor-page{
   width:100%;
@@ -83,14 +103,6 @@ body{
   background:none;
   cursor:pointer;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -1177,16 +1189,23 @@ body{
 
 .bottom-nav{
   height: 64px;
-  width:100%;
+  width: auto;
   background:#061235;
   border-radius:32px;
   padding:10px 10px;
+
   display:flex;
   justify-content: center;
   align-items:center;
   margin-bottom: 0px;
-    margin-top: 25px;
+  margin-top: 25px;
   gap: 60px;
+  z-index: 999;
+
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 }
 
 
@@ -1425,13 +1444,19 @@ body{
 
   /* SIDEBAR */
 
-  .desktop-sidebar{
-    width:130px;
-    background:#18233f;
-    display:flex;
-    flex-direction:column;
-    padding:40px 20px;
+    .desktop-sidebar {
+    position: fixed; /* Locks sidebar in place */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 130px;
+    background: #18233f;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    z-index: 1000;
   }
+
 
 .sidebar-logo{
   font-family:"Acme", sans-serif;
@@ -1492,6 +1517,7 @@ body{
   .main-content{
     flex:1;
     background:#f5f5f5;
+    margin-left: 130px;
   }
 
   .top-header{
@@ -1603,6 +1629,96 @@ body{
 
 
 
+
+/* SEARCH LOADING OVERLAY */
+
+/* .search-loading {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  z-index: 9999;
+}
+*/
+
+
+.search-loading.hidden {
+  display: none;
+} 
+
+
+.search-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  z-index: 99999;
+}
+
+.search-loading p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.search-loading .loading-spinner {
+  width: 55px;
+  height: 55px;
+
+  border: 5px solid #e5e7eb;
+  border-top: 5px solid #7c3aed;
+  border-right: 5px solid #2563eb;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+
+.search-empty-state{
+  display:none;
+
+  text-align:center;
+
+  margin-top:10px;
+
+  font-size:14px;
+  font-weight:500;
+
+  color:#7C3AED;
+
+  font-family:"Inter", sans-serif;
+}
 
 
 

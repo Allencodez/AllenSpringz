@@ -15,6 +15,20 @@
 body {
   background: var(--bg);
   font-family: "Inter", sans-serif;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+body.page-enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.page-exit {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 .setup-container {
